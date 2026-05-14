@@ -1,7 +1,7 @@
 name: Segnalazione Bug 🐛
 description: Segnala un malfunzionamento su uno dei sistemi dell'ecosistema Rovi
 title: "[BUG] <Breve descrizione del problema>"
-labels: ["bug", "triage"]
+labels: ["type: bug", "status: triage"]
 body:
   - type: dropdown
     id: project

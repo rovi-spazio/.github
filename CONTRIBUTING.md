@@ -16,16 +16,16 @@ Non è necessario sapere esattamente in quale modulo o repository si trovi il co
 
 ## 🔀 2. Per il Team di Sviluppo (Processo di Triage)
 
-Le nuove Issue vengono create automaticamente con la label `triage`. Chi fa da revisore (maintainer) segue questi step:
+Le nuove Issue vengono create automaticamente con la label `status: triage`. Chi fa da revisore (maintainer) segue questi step:
 
 1. **Analisi e Assegnazione Area**
-   Analizzare la richiesta e determinare i microservizi coinvolti. Rimuovere la label `triage` e applicare le label di competenza:
+   Analizzare la richiesta e determinare i microservizi coinvolti. Rimuovere la label `status: triage` e applicare le label di competenza (che ti raccomandiamo di creare):
    - `area: frontend` / `area: UI`
    - `area: iam` (Autenticazione/Utenti)
    - `area: payments` (Transazioni/Gateway)
    - `area: core-api`
-2. **Priorità**
-   Assegnare una label di gravità (es. `priority: critical`, `priority: medium`).
+2. **Priorità e Stato**
+   Assegnare una label di priorità (`P1: Critical`, `P2: High`, `P3: Medium`) e aggiornare lo stato (es. `status: in-progress`, `status: blocked`).
 3. **Assegnazione**
    Assegnare (`Assignees`) la issue allo sviluppatore o al team incaricato.
 4. **Trasferimento (Opzionale ma raccomandato)**

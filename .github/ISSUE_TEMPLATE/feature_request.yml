@@ -1,7 +1,7 @@
 name: Proposta Nuova Funzionalità 💡
 description: Suggerisci un'idea per espandere i servizi digitali
 title: "[FEATURE] <Titolo della tua idea>"
-labels: ["enhancement", "triage"]
+labels: ["type: enhancement", "status: triage"]
 body:
   - type: textarea
     id: problem
