@@ -1,0 +1,20 @@
+name: Welcome New Contributors
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: '👋 Ciao e benvenuto/a! Grazie per aver aperto la tua prima issue nell ecosistema di **Rovi Spazio Creativo ETS**. Il nostro team la prenderà in carico a breve per effettuare il Triage. Nel frattempo, se non l hai già fatto, ti invitiamo a leggere la nostra [Guida alla Contribuzione](https://github.com/rovi-spazio/.github/blob/main/CONTRIBUTING.md).'
+          pr-message: '👋 Ciao e grazie mille per la tua prima Pull Request! Un maintainer del team la revisionerà al più presto. Nel frattempo, verifica che la tua PR includa tutto il necessario seguendo le indicazioni del template.'

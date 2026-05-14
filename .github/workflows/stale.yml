@@ -1,0 +1,22 @@
+name: Close Stale Issues
+on:
+  schedule:
+    - cron: '0 2 * * *' # Gira alle 2 di notte ogni giorno
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          stale-issue-message: '⏳ Questa issue è inattiva da 60 giorni. Per mantenere il nostro backlog pulito, è stata marcata come "stale". Verrà chiusa automaticamente tra 7 giorni se non ci saranno nuovi commenti. Se il problema persiste o la feature è ancora desiderata, lascia pure un commento!'
+          stale-pr-message: '⏳ Questa Pull Request è inattiva da 60 giorni. Verrà chiusa automaticamente tra 7 giorni se non ci saranno ulteriori aggiornamenti.'
+          close-issue-message: '🚪 Issue chiusa automaticamente per inattività prolungata. Se il problema si ripresenta, sentiti libero/a di aprire una nuova issue facendo riferimento a questa.'
+          days-before-stale: 60
+          days-before-close: 7
+          stale-issue-label: 'stale'
+          exempt-issue-labels: 'status: blocked, P1: Critical'

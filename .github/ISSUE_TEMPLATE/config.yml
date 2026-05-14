@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🛡️ Segnalazione di Sicurezza
+    url: https://github.com/rovi-spazio/.github/blob/main/SECURITY.md
+    about: Se hai trovato una vulnerabilità critica o dati esposti, NON usare le issue pubbliche. Leggi qui la procedura.
