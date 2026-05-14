@@ -19,7 +19,7 @@ Non è necessario sapere esattamente in quale modulo o repository si trovi il co
 Le nuove Issue vengono create automaticamente con la label `status: triage`. Chi fa da revisore (maintainer) segue questi step:
 
 1. **Analisi e Assegnazione Area**
-   Analizzare la richiesta e determinare i microservizi coinvolti. Rimuovere la label `status: triage` e applicare le label di competenza (che ti raccomandiamo di creare):
+   Analizzare la richiesta e determinare i microservizi coinvolti. Rimuovere la label `status: triage` e applicare le label di competenza. Per le segnalazioni Bug, una label `area:` viene già pre-applicata automaticamente in base ai campi del modulo: verificala e correggila se necessario.
    - `area: frontend` / `area: UI`
    - `area: iam` (Autenticazione/Utenti)
    - `area: payments` (Transazioni/Gateway)

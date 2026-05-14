@@ -7,7 +7,7 @@ La sicurezza dell'ecosistema di **Rovi Spazio Creativo ETS** è una priorità as
 Se ritieni di aver trovato una vulnerabilità legata alla sicurezza (es. falle di autenticazione, problemi nei pagamenti, esposizione di dati, permessi errati), ti preghiamo di **non aprire una Issue pubblica**.
 
 Invia invece i dettagli del problema in privato a:
-**[Inserisci qui l'email del responsabile tecnico, es. admin@rovispazio.it]**
+**admin@rovispazio.it**
 
 Ti chiediamo di includere:
 1. Il repository e/o l'ambiente interessato (es. Produzione, IAM platform).
