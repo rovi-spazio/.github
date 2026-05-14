@@ -1,0 +1,33 @@
+name: Proposta Nuova Funzionalità 💡
+description: Suggerisci un'idea per espandere i servizi digitali
+title: "[FEATURE] <Titolo della tua idea>"
+labels: ["enhancement", "triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Quale problema risolve?
+      description: Spiega il contesto. È un'esigenza interna o una richiesta della community?
+      placeholder: "Gli utenti vorrebbero poter scaricare le fatture dei pagamenti passati direttamente dal loro profilo..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Soluzione proposta
+      description: Descrivi come vorresti che funzionasse.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: tech_impact
+    attributes:
+      label: Impatto Tecnico Previsto (Seleziona le aree coinvolte)
+      description: Quali parti del nostro stack snello verranno toccate?
+      options:
+        - label: UI/Frontend (React, Vite, Tailwind, HTML/CSS)
+        - label: Core App / API (Python)
+        - label: Identity & Access Management (IAM)
+        - label: Servizio Pagamenti (Java)
+        - label: Database / Firebase / Storage

@@ -1,0 +1,60 @@
+name: Segnalazione Bug 🐛
+description: Segnala un malfunzionamento su uno dei sistemi dell'ecosistema Rovi
+title: "[BUG] <Breve descrizione del problema>"
+labels: ["bug", "triage"]
+body:
+  - type: dropdown
+    id: project
+    attributes:
+      label: Applicazione / Sistema interessato
+      description: Su quale piattaforma hai riscontrato il problema?
+      options:
+        - "App Coworking (Prenotazioni, Autenticazione, Pagamenti)"
+        - "Sito Web Principale (rovispaziocreativo)"
+        - "Gestionale Interno (rovi-gestionale)"
+        - "Social Canvas (rovi-social-canvas)"
+        - "Altro / Infrastruttura"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: coworking_module
+    attributes:
+      label: Modulo App Coworking (Opzionale)
+      description: Se sai già quale parte dell'App Coworking sta fallendo, specificalo.
+      options:
+        - "Non lo so / Riguarda l'interfaccia generale"
+        - "Login / Registrazione / Profili (IAM)"
+        - "Checkout / Pagamenti"
+        - "Logica di Prenotazione Scrivanie/Sale"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione del Bug
+      description: Spiega chiaramente cosa succede e cosa invece dovrebbe succedere.
+      placeholder: "Durante il checkout della postazione fissa, il sistema restituisce un errore di autenticazione..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Passaggi per riprodurre il problema
+      value: |
+        1. Vai su '...'
+        2. Clicca su '...'
+        3. Scorri fino a '...'
+        4. Vedi l'errore
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Ambiente
+      options:
+        - "Produzione (Live)"
+        - "Sviluppo / Preview Locale"
+    validations:
+      required: true
