@@ -1,0 +1,49 @@
+name: Auto Triage Labeler
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body || '';
+
+            // Estrae il valore di un campo dell'issue form dato il suo heading
+            const field = (heading) => {
+              const re = new RegExp(`###\\s*${heading}\\s*\\n+([^\\n]+)`, 'i');
+              const m = body.match(re);
+              const v = m ? m[1].trim() : '';
+              return (v && v !== '_No response_') ? v : '';
+            };
+
+            const project = field('Applicazione / Sistema interessato');
+            const module = field('Modulo App Coworking \\(Opzionale\\)');
+
+            const labels = new Set();
+
+            // Il modulo specifico ha priorità sull'applicazione generica
+            if (/IAM|Login|Registrazione|Profili/i.test(module)) labels.add('area: iam');
+            else if (/Checkout|Pagament/i.test(module)) labels.add('area: payments');
+            else if (/Prenotazione|Scrivani|Sale/i.test(module)) labels.add('area: core-api');
+
+            if (labels.size === 0) {
+              if (/Sito Web|rovispaziocreativo/i.test(project)) labels.add('area: frontend');
+              else if (/Gestionale/i.test(project)) labels.add('area: frontend');
+              else if (/Social Canvas/i.test(project)) labels.add('area: core-api');
+            }
+
+            if (labels.size > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.issue.number,
+                labels: [...labels],
+              });
+            }

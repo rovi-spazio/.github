@@ -3,3 +3,6 @@ contact_links:
   - name: 🛡️ Segnalazione di Sicurezza
     url: https://github.com/rovi-spazio/.github/blob/main/SECURITY.md
     about: Se hai trovato una vulnerabilità critica o dati esposti, NON usare le issue pubbliche. Leggi qui la procedura.
+  - name: 📋 Domande generiche e processo di Triage
+    url: https://github.com/rovi-spazio/.github/blob/main/CONTRIBUTING.md
+    about: Non è un bug né una proposta? Consulta la Guida alla Contribuzione prima di aprire una issue.

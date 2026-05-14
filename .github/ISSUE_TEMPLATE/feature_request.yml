@@ -20,6 +20,12 @@ body:
     validations:
       required: true
 
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative considerate (Opzionale)
+      description: Hai pensato ad altri approcci o workaround? Spiega perché li hai scartati.
+
   - type: checkboxes
     id: tech_impact
     attributes:
