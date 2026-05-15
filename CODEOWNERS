@@ -1,0 +1,17 @@
+# CODEOWNERS per l'infrastruttura condivisa (.github)
+# Questo file definisce chi deve approvare le Pull Request che modificano determinati file.
+
+# Per impostazione predefinita, qualsiasi modifica richiede la review del team principale
+* @rovi-spazio/rovi-dev-lab
+
+# Le policy di sicurezza devono essere approvate dal team security e da chi gestisce l'IAM
+/SECURITY.md @rovi-spazio/security @rovi-spazio/iam
+
+# Le modifiche ai template delle issue interessano chi fa Triage e Frontend
+/.github/ISSUE_TEMPLATE/ @rovi-spazio/frontend
+
+# I flussi di automazione (GitHub Actions) sono competenza dell'infrastruttura
+/.github/workflows/ @rovi-spazio/infra
+
+# Il file del team deve essere approvato dai lead
+/TEAM.md @rovi-spazio/rovi-dev-lab
