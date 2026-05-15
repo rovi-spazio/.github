@@ -17,16 +17,16 @@ Gli username GitHub verranno aggiunti in CODEOWNERS una volta definiti.
 
 ```mermaid
 graph TD
-    LR["<b>Luca Rosati</b><br/>Presidente · Product / UX<br/>Gestione org e repository"]
+    LR["Luca Rosati<br/>Presidente — Product / UX<br/>Gestione org e repository"]
+    DC["Daniele Ciucci<br/>Architettura — Payments<br/>Security — Frontend"]
+    GI["Gianmarco Innocenzi<br/>Backend — Core API"]
+    AC["Andrea Ceccarelli<br/>Infra — Oracle Cloud<br/>IAM — Config / Compose"]
+    FB["Francesco Battisti<br/>Dominio applicazione<br/>SEO e indicizzazione"]
 
-    subgraph AREE["Aree tecniche"]
-        DC["<b>Daniele Ciucci</b><br/>Architettura · Payments<br/>Security · Frontend"]
-        GI["<b>Gianmarco Innocenzi</b><br/>Backend · Core API"]
-        AC["<b>Andrea Ceccarelli</b><br/>Infra · Oracle Cloud<br/>IAM · Config / Compose"]
-        FB["<b>Francesco Battisti</b><br/>Dominio applicazione<br/>SEO e indicizzazione"]
-    end
-
-    LR --> DC & GI & AC & FB
+    LR --> DC
+    LR --> GI
+    LR --> AC
+    LR --> FB
 ```
 
 ## Flusso di revisione (secondo revisore)
