@@ -1,4 +1,4 @@
-# 🌿 Rovi Spazio Creativo ETS - Engineering
+# 🌿 Rovi Spazio Creativo ETS
 
 Sviluppiamo l'infrastruttura digitale per l'hub di comunità di Roviano. Uniamo rigore tecnico e approcci snelli ed essenziali per creare soluzioni scalabili a supporto della rigenerazione territoriale della Valle dell'Aniene.
 
